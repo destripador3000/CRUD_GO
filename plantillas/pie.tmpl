@@ -1,0 +1,17 @@
+{{define "pie"}}
+
+</div>
+<script>
+    document.getElementById('myForm').addEventListener('submit', function(event) {
+        const nombreInput = document.getElementById('nombre');
+        const pattern = /^[A-Za-z]+$/;
+        if (!pattern.test(nombreInput.value)) {
+            event.preventDefault();
+            alert('Por favor, ingrese solo letras en el campo Nombre.');
+        }
+    });
+</script>   
+</body>
+</html>
+
+{{end}}

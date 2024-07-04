@@ -1,0 +1,34 @@
+{{define "crear"}}
+{{template "cabecera"}}
+
+<div class="card">
+    <div class="card-header">
+        Empleados
+    </div>
+
+    <div class="card-body">
+       <form id="myForm"  method="post" action="/insertar">
+
+        <div class="form-group">
+          <label for="">Nombre:</label>
+          <input type="text" 
+            class="form-control" name="nombre" id="nombre" aria-describedby="helpId" placeholder="" pattern="[A-Za-z]+" required>
+          <small id="helpId" class="form-text text-muted">Nombre; Solo letras en este campo</small>
+        </div>
+        <div class="form-group">
+          <label for="">Correo:</label>
+          <input type="email" class="form-control" name="correo" id="correo" aria-describedby="emailHelpId" placeholder="">
+          <small id="emailHelpId" class="form-text text-muted">Correo:</small>
+        </div>
+        <button type="submit" class="btn btn-success">Agregar Empleado</button>
+        <a name="" id="" class="btn btn-primary" href="/" role="button">Cancelar</a>
+       </form>
+
+
+    </div>
+    
+</div>
+
+
+{{template "pie"}}
+{{end}}
